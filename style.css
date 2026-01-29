@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -6,36 +14,24 @@ body {
   line-height: 1.7;
 }
 
+/* ===== HEADER ===== */
 header {
   background: #0f0f0f;
   color: white;
-  padding: 25px 20px;
+  padding: 20px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.9em;
   letter-spacing: 1px;
 }
-/* Navigation Menu */
-nav {
-  background: #111;
-  padding: 14px 0;
-  text-align: center;
-}
 
-nav a {
-  color: white !important;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-nav a:hover {
-  color: #1f8f3a !important;
-}
+/* ===== NAVIGATION ===== */
 nav {
   margin-top: 12px;
 }
@@ -45,8 +41,16 @@ nav a {
   margin: 0 14px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+nav a:hover {
+  color: #1f8f3a;
+  opacity: 0.85;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
@@ -56,31 +60,122 @@ nav a {
 }
 
 .hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 2.6em;
+  margin-bottom: 15px;
 }
 
+.hero p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 1.1em;
+}
+
+/* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
   background: #1f8f3a;
   color: white;
   padding: 14px 30px;
-  margin-top: 20px;
+  margin: 15px 10px 0;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
+.btn:hover {
+  background: #166d2c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== CONTENT SECTIONS ===== */
 section {
   max-width: 1100px;
   margin: auto;
   padding: 70px 20px;
 }
 
-h2 {
-  color: #1f8f3a;
+section:nth-of-type(even) {
+  background: #ffffff;
 }
 
+section p {
+  max-width: 750px;
+}
+
+h2 {
+  color: #1f8f3a;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 25px;
+}
+
+/* ===== SERVICES GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonial {
+  background: #fff;
+  border-left: 5px solid #1f8f3a;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ===== LISTS ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== FORMS ===== */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+form button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
 footer {
   background: #000;
   color: #aaa;
@@ -90,12 +185,7 @@ footer {
   margin-top: 40px;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-}
-/* Mobile Call Button */
+/* ===== MOBILE CALL BAR ===== */
 .call-bar {
   position: fixed;
   bottom: 0;
@@ -105,6 +195,7 @@ form input, form textarea {
   text-align: center;
   padding: 15px 0;
   display: none;
+  z-index: 999;
 }
 
 .call-bar a {
@@ -114,9 +205,18 @@ form input, form textarea {
   font-size: 18px;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+
   .call-bar {
     display: block;
   }
 }
-https://andybonney.github.io/-AndyBonney-AndyBonney-Prec
