@@ -78,3 +78,27 @@ form input, form textarea {
   padding: 12px;
   margin-bottom: 10px;
 }
+/* Mobile Call Button */
+.call-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1f8f3a;
+  text-align: center;
+  padding: 15px 0;
+  display: none;
+}
+
+.call-bar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .call-bar {
+    display: block;
+  }
+}
