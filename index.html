@@ -24,6 +24,7 @@
     <ul class="nav">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="roof-repairs.html">Roof Repairs</a></li>
+      <li><a href="flatroofing.html">Flat Roofing</a></li>
       <li><a href="services.html">All Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -61,7 +62,7 @@
     </div>
 
     <div class="service-box">
-      <h3>Flat Roofing</h3>
+      <h3><a href="flatroofing.html">Flat Roofing</a></h3>
       <p>Durable flat roofing installations and repairs for homes, garages and extensions.</p>
     </div>
 
@@ -119,14 +120,15 @@
   <a href="tel:07359336518">📞 Call Precision Roofing</a>
 </div>
 
-<!-- LOCAL BUSINESS SCHEMA -->
+<!-- COMBINED BUSINESS + REVIEW SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
   "name": "Precision Roofing",
-  "telephone": "+447359336518",
+  "image": "https://andybonney.github.io/-AndyBonney-AndyBonney-Precision-roofing-website-/images/logo.png",
   "url": "https://andybonney.github.io/-AndyBonney-AndyBonney-Precision-roofing-website-/",
+  "telephone": "+447359336518",
   "priceRange": "££",
   "address": {
     "@type": "PostalAddress",
@@ -141,6 +143,31 @@
     "Welwyn Garden City",
     "Hertford",
     "Hatfield"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "James"},
+      "reviewBody": "Fantastic service from start to finish. Quick response and the repair looks perfect.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Sarah"},
+      "reviewBody": "Very honest and professional roofers. Fair price and quick work.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"}
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Mark"},
+      "reviewBody": "Storm damaged our roof and they came out the same day. Lifesavers!",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"}
+    }
   ]
 }
 </script>
