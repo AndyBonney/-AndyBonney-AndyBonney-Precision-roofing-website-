@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Roof Repairs Stevenage | Emergency & Local Roofers | Precision Roofing</title>
-
   <meta name="description" content="Need roof repairs in Stevenage? Precision Roofing are trusted local roofers providing fast, reliable emergency roof repairs, flat roofing and guttering services across Stevenage and Hertfordshire. Free quotes available.">
 
   <link rel="stylesheet" href="style.css">
@@ -20,7 +19,7 @@
 <body>
 
 <header>
-  <nav>
+  <nav aria-label="Main Navigation">
     <ul class="nav">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -31,7 +30,7 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" aria-label="Roof repair services in Stevenage">
   <div class="hero-content">
     <h1>Trusted Roof Repairs in Stevenage</h1>
     <p>Precision Roofing is a family-run roofing company based in Stevenage, providing expert roof repairs in Great Ashby, Chells, Old Town and surrounding areas since 2016.</p>
@@ -99,9 +98,9 @@
 <section>
   <h2>Recent Roofing Work</h2>
   <div class="gallery">
-    <img src="images/roof1.jpg" alt="Roof repair in Stevenage" onclick="openLightbox(this)">
-    <img src="images/roof2.jpg" alt="Flat roof installation" onclick="openLightbox(this)">
-    <img src="images/roof3.jpg" alt="Guttering replacement" onclick="openLightbox(this)">
+    <img src="images/roof1.jpg" alt="Tile roof repair completed in Stevenage" loading="lazy" onclick="openLightbox(this)">
+    <img src="images/roof2.jpg" alt="Flat roof installation project" loading="lazy" onclick="openLightbox(this)">
+    <img src="images/roof3.jpg" alt="New guttering installation on house" loading="lazy" onclick="openLightbox(this)">
   </div>
 </section>
 
@@ -109,7 +108,12 @@
   <h2>Find Us in Stevenage</h2>
   <p>We are based in Stevenage and cover all surrounding Hertfordshire areas.</p>
   <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Stevenage,Hertfordshire&output=embed" loading="lazy"></iframe>
+    <iframe 
+      src="https://www.google.com/maps?q=Stevenage,Hertfordshire&output=embed"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 </section>
 
@@ -132,8 +136,8 @@
 </div>
 
 <!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
+<div id="lightbox" onclick="closeLightbox()" aria-hidden="true">
+  <img id="lightbox-img" alt="Expanded roofing work image">
 </div>
 
 <script>
@@ -143,6 +147,22 @@ function openLightbox(img) {
 }
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<!-- LOCAL BUSINESS SEO SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Precision Roofing",
+  "telephone": "07359 336518",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Stevenage, Hertfordshire"
+  },
+  "url": "https://andybonney.github.io/-AndyBonney-AndyBonney-Precision-roofing-website-/",
+  "priceRange": "££"
 }
 </script>
 
