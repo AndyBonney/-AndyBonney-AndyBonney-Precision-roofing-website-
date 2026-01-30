@@ -220,3 +220,35 @@ footer {
     display: block;
   }
 }
+/* ===== NAV LIST FIX (for ul.nav menu) ===== */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav a:hover {
+  color: #1f8f3a;
+  opacity: 0.85;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #1f8f3a;
+  padding-bottom: 3px;
+}
